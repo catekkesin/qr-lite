@@ -17,6 +17,7 @@ class QRBase {
     this.#addSeperatorPatterns(0, 18);
     this.#addAlignmentPattern(16, 16);
     this.#addTimingPatterns();
+    this.#addDarkModule();
   }
 
   // creates white canvas.
@@ -65,6 +66,10 @@ class QRBase {
     for (let i = 5; i <= 18; i++) {
       if (!(i % 2)) this.ctx.fillRect(6, i, 1, 1);
     }
+  };
+
+  #addDarkModule = () => {
+    this.addBlackDot(8, 17);
   };
 
   addBlackDot = (x, y) => {
