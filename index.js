@@ -15,6 +15,7 @@ class QRBase {
     this.#addSeperatorPatterns(0, 0);
     this.#addSeperatorPatterns(18, 0);
     this.#addSeperatorPatterns(0, 18);
+    this.#addAlignmentPattern(16, 16);
   }
 
   // creates white canvas.
@@ -40,6 +41,17 @@ class QRBase {
     this.ctx.fillRect(x + 2, y + 2, 3, 3);
   };
 
+  #addAlignmentPattern = (x, y) => {
+    this.ctx.fillStyle = BLACK;
+    this.ctx.fillRect(x, y, 5, 5);
+
+    this.ctx.fillStyle = WHITE;
+    this.ctx.fillRect(x + 1, y + 1, 3, 3);
+
+    this.ctx.fillStyle = BLACK;
+    this.ctx.fillRect(x + 2, y + 2, 1, 1);
+  };
+
   addBlackDot = (x, y) => {
     this.ctx.fillStyle = BLACK;
     this.ctx.fillRect(x, y, this.rectSize, this.rectSize);
@@ -59,7 +71,3 @@ class QRBase {
 
 const test = new QRBase();
 test.save();
-
-// Create a new 132x132 canvas
-
-// Place a black rectangle inside the canvas
