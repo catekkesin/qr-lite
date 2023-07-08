@@ -12,9 +12,9 @@ class QRBase {
     this.canvas = this.#createCanvas();
     this.ctx = this.canvas.getContext("2d");
 
-    this.#addSeperatorPatterns(0, 0);
-    this.#addSeperatorPatterns(18, 0);
-    this.#addSeperatorPatterns(0, 18);
+    this.#addFinderPatterns(0, 0);
+    this.#addFinderPatterns(18, 0);
+    this.#addFinderPatterns(0, 18);
     this.#addAlignmentPattern(16, 16);
     this.#addTimingPatterns();
     this.#addDarkModule();
@@ -32,7 +32,7 @@ class QRBase {
     return canvas;
   };
 
-  #addSeperatorPatterns = (x, y) => {
+  #addFinderPatterns = (x, y) => {
     this.ctx.fillStyle = BLACK;
     this.ctx.fillRect(x, y, 7, 7);
 
