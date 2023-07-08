@@ -1,0 +1,16 @@
+{
+  "name": "qr-lite",
+  "version": "1.0.0",
+  "description": "simple version4 qr code creator",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "author": "arda tekkesin",
+  "license": "MIT",
+  "dependencies": {
+    "canvas": "^2.11.2",
+    "pngjs": "^7.0.0",
+    "sharp": "^0.32.1"
+  }
+}
