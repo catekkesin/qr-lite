@@ -16,7 +16,7 @@ class QRBase {
     this.#addSeperatorPatterns(18, 0);
     this.#addSeperatorPatterns(0, 18);
     this.#addAlignmentPattern(16, 16);
-    this.#AddTimingPatterns();
+    this.#addTimingPatterns();
   }
 
   // creates white canvas.
@@ -51,6 +51,20 @@ class QRBase {
 
     this.ctx.fillStyle = BLACK;
     this.ctx.fillRect(x + 2, y + 2, 1, 1);
+  };
+
+  #addTimingPatterns = () => {
+    // y sabit 6 için  x = 8 den 16ya kadar siyahtan baslamak uzere bi siyah bi beyaz.
+    // x sabit 6 icin y=8 den 16 ya kadar ayni.
+
+    this.ctx.fillStyle = BLACK;
+    for (let i = 5; i <= 18; i++) {
+      if (!(i % 2)) this.ctx.fillRect(i, 6, 1, 1);
+    }
+
+    for (let i = 5; i <= 18; i++) {
+      if (!(i % 2)) this.ctx.fillRect(6, i, 1, 1);
+    }
   };
 
   addBlackDot = (x, y) => {
