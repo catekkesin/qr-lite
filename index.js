@@ -16,6 +16,7 @@ class QRBase {
     this.#addSeperatorPatterns(18, 0);
     this.#addSeperatorPatterns(0, 18);
     this.#addAlignmentPattern(16, 16);
+    this.#AddTimingPatterns();
   }
 
   // creates white canvas.
